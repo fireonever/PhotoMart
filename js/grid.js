@@ -399,7 +399,7 @@ var Grid = (function() {
             var imageid= $itemEl.data( 'imageid');
 
             "use strict";
-            var dappContactAddress = "n1z1h7sxy57GnZWFMXZ1YjuX4PFXnQZpSzZ";
+            var dappContactAddress = "n1vHBSdx1yXjj6fdf92fGRgnoRYbvJPHSmb";
             var nebulas = require("nebulas"), Account = Account, neb = new nebulas.Neb();
             neb.setRequest(new nebulas.HttpRequest("https://mainnet.nebulas.io"))
             var NebPay = require("nebpay");
