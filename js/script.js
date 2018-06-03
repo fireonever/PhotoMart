@@ -126,11 +126,14 @@ function init() {
         var photos = JSON.parse(result);
 
         for (var i = 0; i <photos.length; ++i) {
+            var file = AV.File.withURL('resume.png', photos[i].url);
+			console.log(file.thumbnailURL(300, 188));
+			
             $("#og-grid").append("<li>\n" +
-                "\t\t\t\t\t\t<a href=\"#\" data-largesrc=" + photos[i].url + " data-imageid=" + photos[i].id +" data-description=\"Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot.\">\n" +
-                "\t\t\t\t\t\t\t<img src=" + photos[i].url + " alt=\"img01\"/>\n" +
+                "\t\t\t\t\t\t<a href=\"#\" data-largesrc=" + file.thumbnailURL(600, 376) + " data-imageid=" + photos[i].id +" data-description=\"Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot.\">\n" +
+                "\t\t\t\t\t\t\t<img src=" + file.thumbnailURL(300, 188) + " alt=\"img01\"/>\n" +
                 "\t\t\t\t\t\t</a>\n" +
-                "\t\t\t\t\t</li>")
+                "\t\t\t\t\t</li>");
         }
 
         Grid.init();
