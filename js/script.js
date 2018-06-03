@@ -81,7 +81,8 @@ $(function(){
             console.log(callArgs);
             serialNumber = nebPay.call(to, value, callFunction, callArgs, {    //使用nebpay的call接口去调用合约,
                 listener: function (resp) {
-                    console.log("thecallback is " + resp)
+                    alert("上传成功");
+                    console.log("thecallback is " + resp);
                 }
             });
         }, function(error) {
